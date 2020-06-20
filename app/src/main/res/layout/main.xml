@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/Toolbar.Light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_large">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/image"
+                        android:layout_width="235dp"
+                        android:layout_height="235dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/utp"
+                        app:civ_shadow="true"
+                        app:civ_shadow_radius="0"
+                        app:civ_border_width="1dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cancion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:text="IOFrebian Theo Jansen"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="Universidad Tecnológica del Perú"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/grey_40" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:gravity="center"
+                android:padding="@dimen/spacing_large">
+
+                <ImageButton
+                    android:id="@+id/bt_up"
+                    android:layout_width="@dimen/spacing_xxxlarge"
+                    android:layout_height="@dimen/spacing_xxxlarge"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="controlClick"
+                    app:srcCompat="@drawable/arriba" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:gravity="center"
+                android:padding="@dimen/spacing_large">
+
+                <ImageButton
+                    android:id="@+id/bt_prev"
+                    android:layout_width="@dimen/spacing_xxxlarge"
+                    android:layout_height="@dimen/spacing_xxxlarge"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="controlClick"
+                    app:srcCompat="@drawable/izquierda" />
+
+                <View
+                    android:layout_width="@dimen/spacing_xlarge"
+                    android:layout_height="0dp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/bt_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_medium"
+                    android:clickable="true"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:elevation="0dp"
+                    app:fabSize="normal"
+                    app:rippleColor="@android:color/white"
+                    app:srcCompat="@drawable/stop1" />
+
+                <View
+                    android:layout_width="@dimen/spacing_xlarge"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/bt_next"
+                    android:layout_width="@dimen/spacing_xxxlarge"
+                    android:layout_height="@dimen/spacing_xxxlarge"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="controlClick"
+                    app:srcCompat="@drawable/derecha" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:gravity="center"
+                android:padding="@dimen/spacing_large">
+
+                <ImageButton
+                    android:id="@+id/bt_down"
+                    android:layout_width="@dimen/spacing_xxxlarge"
+                    android:layout_height="@dimen/spacing_xxxlarge"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="controlClick"
+                    app:srcCompat="@drawable/abajo" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
